@@ -59,11 +59,11 @@ loggers.add('errorLogger', {
 });
 
 const infoLogger = loggers.get('infoLogger');
-<<<<<<< Updated upstream
+
 
 //Connecting to MongoDB (async/await approach)
-const connectDb = async () => {
-    await mongoose.connect('mongodb://localhost:27017/todo', {useNewUrlParser: true, useUnifiedTopology : true}).then(
+const connectDb = async() => {
+    await mongoose.connect('mongodb://localhost:27017/todo', { useNewUrlParser: true, useUnifiedTopology: true }).then(
         () => {
             console.log(chalk.green(`Connected to database`))
             infoLogger.info("Connected to database");
@@ -73,15 +73,15 @@ const connectDb = async () => {
             process.exit(1)
         }
     )
-  }
-  
-  connectDb().catch(error => console.error(error))
+}
 
-  
-=======
+connectDb().catch(error => console.error(error))
+
+
+
 //to access from data
 //let bodyParser = require('body-parser');
->>>>>>> Stashed changes
+
 //Accessing the routes for the user
 const todoRoutes = require('./routes/todo');
 
