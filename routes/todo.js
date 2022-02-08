@@ -3,29 +3,34 @@ const router = require('express').Router();
 
 //CREATE
 router.post("/todo", (req, res) => {
+
     console.log(req.body.title);
     console.log(req.body.description);
-    
-    res.json({"msg": "Create a Todo"});
+
+    res.json({ "msg": "Create a Todo" });
+
+    res.json({ "msg": "Create a Todo" });
+
 });
 
 //READ
 router.get("/todos", (req, res) => {
-    res.json({"msg": "Read all the todos"});
+    res.json({ "msg": "Read all the todos" });
 });
 
 router.get("/todo", (req, res) => {
-    res.json({"msg": "Read a todo"});
+    res.json({ "msg": "Read a todo" });
 });
 
 //UPDATE
 router.put("/todo", (req, res) => {
-    res.json({"msg": "Update a Todo"});
+    res.json({ "msg": "Update a Todo" });
 });
 
 //DELETE
 router.delete("/todo", (req, res) => {
-    res.json({"msg": "Delete a Todo"});
+    res.json({ "msg": "Delete a Todo" });
 });
 
+// le module router est accessible à l'extérieur
 module.exports = router;
